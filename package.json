@@ -4,6 +4,11 @@
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.1.16",
+    "apollo-cache-inmemory": "^1.2.10",
+    "apollo-client": "^2.4.2",
+    "apollo-link": "^1.2.3",
+    "apollo-link-rest": "^0.5.0",
+    "apollo-link-state": "^0.4.2",
     "fine-uploader": "^5.16.2",
     "fine-uploader-wrappers": "^1.0.1",
     "graphql": "^14.0.2",
@@ -12,15 +17,15 @@
     "react": "^16.5.0",
     "react-apollo": "^2.1.11",
     "react-dom": "^16.5.0",
+    "react-fine-uploader": "^1.1.1",
     "react-pose": "^3.3.0",
     "react-redux": "^5.0.7",
     "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.5",
     "redux": "^4.0.0",
-    "redux-saga": "^0.16.0",
-    "react-scripts": "1.1.5"
+    "redux-saga": "^0.16.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

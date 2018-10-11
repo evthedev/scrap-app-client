@@ -26,7 +26,7 @@ import ProjectsPageId from './containers/ProjectsPageId';
 import registerServiceWorker from './registerServiceWorker';
 
 const restLink = new RestLink({
-    uri: 'http://localhost:5000/api',
+    uri: 'http://scrap-app-server.herokuapp.com/api',
     credentials: 'same-origin',
   });
 
