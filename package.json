@@ -1,0 +1,30 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.1.16",
+    "fine-uploader": "^5.16.2",
+    "fine-uploader-wrappers": "^1.0.1",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.9.2",
+    "history": "^4.7.2",
+    "react": "^16.5.0",
+    "react-apollo": "^2.1.11",
+    "react-dom": "^16.5.0",
+    "react-pose": "^3.3.0",
+    "react-redux": "^5.0.7",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

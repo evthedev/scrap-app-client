@@ -1,0 +1,7 @@
+query GET_PROJECTS {
+    projects @rest(type: "Projects", path: "/projects") {
+        _id
+        name
+        description
+    }
+}
