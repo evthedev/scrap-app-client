@@ -25,9 +25,17 @@ import ProjectsPage from './containers/ProjectsPage';
 import ProjectsPageId from './containers/ProjectsPageId';
 import registerServiceWorker from './registerServiceWorker';
 
+const bearerToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYzA2NzY4ZTEwZjMzMDAyZDM2N2FlZSIsIm5hbWUiOiJhZG1pbiIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvOWYwOThiYzVlZmY5YWE2NzcwOTQzNDM3MTdkZmNjMTI_cz0yMDAmcj1wZyZkPW1tIiwiaWF0IjoxNTM5MzM3NTk5LCJleHAiOjE1NzUzMzc1OTl9.Dnaw_AuFr-Kc1UJmDW-c_z-4C1DfcHhRIL4IJwlR0kk'
+
+const serverUri = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/api' : 'http://scrap-app-server.herokuapp.com/api'
+console.log('serverUri: ', serverUri);
+
 const restLink = new RestLink({
-    uri: 'http://localhost:5000/api',
-    credentials: 'same-origin',
+    uri: serverUri,
+    headers: new Headers({
+        "Content-Type": "application/json",
+        'Authorization': 'Bearer ' + bearerToken
+    })
   });
 
 const cache = new InMemoryCache()
