@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 import FineUploaderS3 from 'fine-uploader-wrappers/s3'
 import Gallery from 'react-fine-uploader'
 
+import TopNav from '../../components/TopNav'
 import { loadProjects } from '../../structural/projects/actions'
 
 import './styles.css';
@@ -74,6 +75,7 @@ class ProjectsPageId extends Component {
   render() {
     return (
       <div className={'project__id'}>
+        <TopNav />
         {this._renderProjectDetails()}
         <Gallery className={'project__gallery'} uploader={uploader} />
       </div>
