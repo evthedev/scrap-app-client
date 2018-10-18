@@ -5,8 +5,9 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { withClientState } from 'apollo-link-state';
 import { ApolloLink } from 'apollo-link';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider, graphql } from 'react-apollo';
 import { RestLink } from 'apollo-link-rest';
+import compose from 'recompose/compose'
 
 import './index.css';
 import createHistory from "history/createBrowserHistory";
@@ -39,12 +40,15 @@ const restLink = new RestLink({
 
 const cache = new InMemoryCache()
 
+const initialState = {
+    currentUserId: 'userid',
+    show_type: 'BELOW_15'
+}
+
 const statelink = new withClientState({
     cache,
-    // resolvers,
-    defaults: {
-        show_type: 'BELOW_15'
-    }
+    resolvers: {},
+    defaults: initialState
 
 })
 
